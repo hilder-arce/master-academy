@@ -1,0 +1,152 @@
+/* ===== NAVBAR CORPORATIVO PREMIUM ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 12px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #3550eb;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Sombra más visible al hacer scroll */
+.nav-links.scrolled {
+  background: #032554;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== LOGO ===== */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  color: #fb740c;
+}
+
+/* Logo con borde tenue */
+.logo-img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo-link:hover .logo-img {
+  transform: rotate(8deg) scale(1.05);
+  box-shadow: 0 0 12px rgba(251, 116, 12, 0.5);
+}
+
+/* ===== ENLACES ===== */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e6ef;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Subrayado minimalista */
+.nav-link .underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fb740c;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover .underline {
+  width: 100%;
+}
+
+/* Hover elegante */
+.nav-link:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ===== ENLACE ACTIVO ===== */
+.nav-link.active {
+  color: #fb740c !important;
+  font-weight: 700;
+}
+
+.nav-link.active .underline {
+  width: 100%;
+}
+
+/* ===== ICONOS ===== */
+.nav-link i {
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.nav-link:hover i {
+  transform: translateY(-3px);
+  color: #fb740c;
+}
+
+/* ===== BOTÓN WHATSAPP ===== */
+.btn-whatsapp {
+  position: relative;
+  background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  box-shadow: 0 3px 12px rgba(18, 140, 126, 0.4);
+  transition: all 0.4s ease;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(90deg, #128c7e 0%, #25d366 100%);
+  box-shadow: 0 5px 18px rgba(18, 140, 126, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ===== MENÚ MÓVIL ===== */
+.dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  background: rgba(10, 30, 60, 0.95);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-menu .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    padding: 10px 20px;
+  }
+}
+
+.dropdown-toggle::after {
+  display: none !important;
+}

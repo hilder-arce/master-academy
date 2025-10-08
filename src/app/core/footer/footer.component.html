@@ -1,0 +1,65 @@
+<footer class="footer text-white mt-2">
+  <div class="container py-5">
+    <div class="row gy-4">
+      
+      <!-- LOGO Y DESCRIPCIÓN -->
+      <div class="col-md-4 d-flex flex-column align-items-start">
+        <div class="d-flex align-items-center mb-2">
+          <img
+            src="https://i.ibb.co/nNVKRXW2/PERFIL.jpg"
+            alt="logo"
+            class="rounded-circle me-2"
+            style="width: 50px; height: 50px;"
+          />
+          <h5 class="fw-bold m-0">MASTER ACADEMY</h5>
+        </div>
+        <p class="text-white-50 small">
+          Formando líderes a través de la educación y la excelencia.  
+          Aprende, crece y alcanza tu máximo potencial.
+        </p>
+      </div>
+
+      <!-- ENLACES RÁPIDOS -->
+      <div class="col-md-4">
+        <h6 class="fw-bold text-uppercase mb-3">Enlaces</h6>
+        <ul class="list-unstyled">
+          <li><a [routerLink]="['/home']" class="footer-link">Inicio</a></li>
+          <li><a [routerLink]="['/cursos']" class="footer-link">Cursos</a></li>
+          <li><a [routerLink]="['/nosotros']" class="footer-link">Nosotros</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="col-md-4">
+        <h6 class="fw-bold text-uppercase mb-3">Contáctanos</h6>
+        <p class="text-white-50 mb-1">
+          <i class="bi bi-geo-alt-fill me-2 text-warning"></i> Trujillo, Perú
+        </p>
+        <p class="text-white-50 mb-1">
+          <i class="bi bi-envelope-fill me-2 text-warning"></i> {{email}}
+        </p>
+        <p class="text-white-50 mb-3">
+          <i class="bi bi-telephone-fill me-2 text-warning"></i> {{telefono}}
+        </p>
+
+        <div class="d-flex gap-3">
+          <a href="https://www.facebook.com/share/12MKm2hshkc/" target="_blank" class="social-link"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/miltonfranco_scalper?igsh=MWpjaGJtcm80amxueg==" target="_blank" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a class="social-link" (click)="openWhatsapp()" ><i class="bi bi-whatsapp"></i></a>
+          <a href="https://www.tiktok.com/@miltonfranco_scalper?_t=ZS-90LEgCeiqCw&_r=1" target="_blank" class="social-link">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://youtube.com/@miltonfranco_scalper?si=9KFE2qDvgQUpewv-" target="_blank" class="social-link"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-bottom text-center py-3 mt-3">
+    <p class="m-0 small text-white-50">
+      © {{ currentYear }} Master Academy | Todos los derechos reservados
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,92 @@
+<!-- 🟢 SECCIÓN HERO (presentación principal) -->
+<section class="hero d-flex flex-column flex-lg-row align-items-center justify-content-between px-4 py-5">
+  <div class="text-content">
+    <h1 class="fw-bold mb-3">Aprende, Crece y Transforma tu Futuro</h1>
+    <p class="lead text-light mb-4">
+      En <span class="text-accent">Master Academy</span>, te ofrecemos cursos prácticos, diseñados por expertos, 
+      para que alcances tus metas profesionales con confianza.
+    </p>
+    <div class="d-flex gap-3">
+      <a [routerLink]="['/cursos']" class="btn btn-primary btn-lg fw-bold">Ver Cursos</a>
+      <a (click)="openWhatsapp()" class="btn btn-outline-light btn-lg fw-bold">💬 Contáctanos</a>
+    </div>
+  </div>
+
+  <div class="image-content mt-2 p-0 mt-lg-0">
+    <img src="https://i.ibb.co/nNVKRXW2/PERFIL.jpg" alt="Estudiantes" class="img-fluid rounded-4 shadow-lg" />
+  </div>
+</section>
+
+<!-- 🟦 SECCIÓN DE CURSOS DESTACADOS -->
+<section class="courses-section py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-3 display-6 text-gradient">Cursos Destacados</h2>
+    <p class="text-muted mb-5">Descubre los programas más solicitados por nuestros estudiantes y potencia tus habilidades al siguiente nivel.</p>
+
+    <div class="row justify-content-center g-4">
+      <!-- 🧠 Curso 1 -->
+      <div class="col-md-4">
+        <div class="card course-card border-0 shadow-lg h-100 hover-zoom">
+          <img src="https://i.ibb.co/5rfLxQN/course1.jpg" class="card-img-top rounded-top" alt="Curso de Desarrollo Web" />
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-dark">Desarrollo Web Completo</h5>
+            <p class="card-text text-secondary">Crea sitios web profesionales desde cero usando HTML, CSS, JavaScript y Angular.</p>
+            <a [routerLink]="['/cursos']" class="btn btn-gradient w-100 mt-2">Ver Detalles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 💡 Curso 2 -->
+      <div class="col-md-4">
+        <div class="card course-card border-0 shadow-lg h-100 hover-zoom">
+          <img src="https://i.ibb.co/jVm8P1L/course2.jpg" class="card-img-top rounded-top" alt="Curso de Marketing Digital" />
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-dark">Marketing Digital</h5>
+            <p class="card-text text-secondary">Aprende estrategias efectivas para redes sociales, anuncios y SEO profesional.</p>
+            <a [routerLink]="['/cursos']" class="btn btn-gradient w-100 mt-2">Ver Detalles</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🚀 Curso 3 -->
+      <div class="col-md-4">
+        <div class="card course-card border-0 shadow-lg h-100 hover-zoom">
+          <img src="https://i.ibb.co/W3W4qMh/course3.jpg" class="card-img-top rounded-top" alt="Curso de Inteligencia Artificial" />
+          <div class="card-body">
+            <h5 class="card-title fw-bold text-dark">Inteligencia Artificial</h5>
+            <p class="card-text text-secondary">Explora el mundo de la IA y aprende a crear modelos inteligentes con Python y TensorFlow.</p>
+            <a [routerLink]="['/cursos']" class="btn btn-gradient w-100 mt-2">Ver Detalles</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🟩 SECCIÓN TESTIMONIOS -->
+<section class="testimonios py-5 text-light text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Lo que dicen nuestros estudiantes</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-dark rounded-4 shadow">
+          <p>“Gracias a Master Academy conseguí mi primer trabajo como desarrollador web.”</p>
+          <h6 class="fw-bold mt-3">— Luis Ramos</h6>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-dark rounded-4 shadow">
+          <p>“Los cursos son prácticos y actualizados. ¡Me encantó el enfoque profesional!”</p>
+          <h6 class="fw-bold mt-3">— Ana Torres</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🟠 SECCIÓN FINAL / LLAMADO A LA ACCIÓN -->
+<section class="cta py-5 text-center">
+  <h2 class="fw-bold mb-3">¿Listo para dar el siguiente paso?</h2>
+  <p class="lead mb-4">Únete a Master Academy y alcanza tu máximo potencial profesional.</p>
+  <a [routerLink]="['/cursos']" class="btn btn-primary btn-lg fw-bold">Comenzar Ahora</a>
+</section>

@@ -1,0 +1,37 @@
+.text-gradient {
+  background: linear-gradient(90deg, #007bff, #00c4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-img {
+  max-width: 90%;
+  border-radius: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #007bff, #00c4ff);
+  color: white;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.card {
+  border-radius: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}

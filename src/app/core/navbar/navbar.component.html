@@ -1,0 +1,133 @@
+<nav class="d-flex nav-links justify-content-between p-1 m-0">
+  <!-- LOGO -->
+ <a [routerLink]="['/home']"
+   class="fw-bold d-none d-lg-flex btn logo-link fs-5 m-1 border-0 link-underline-opacity-0 text-white align-items-center gap-2">
+  
+  <img
+    style="width: 50px; height: 50px;"
+    class="rounded-circle logo-img"
+    src="https://i.ibb.co/nNVKRXW2/PERFIL.jpg"
+    alt="logo">
+  
+  <div class="d-flex flex-column align-items-start lh-sm">
+    <span class="fw-bold text-white">MASTER ACADEMY</span>
+    <p class="m-0 text-black-50 fs-6">Milton Franco</p>
+  </div>
+</a>
+
+
+  <!-- ENLACES PRINCIPALES -->
+  <a
+    [routerLink]="['/home']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="d-none d-lg-flex nav-link link-underline-opacity-0 text-white fs-5 m-1 flex-column align-items-center"
+  >
+    <i class="bi bi-house-door"></i>
+    <span class="underline"></span>
+    Home
+  </a>
+
+  <a
+    [routerLink]="['/cursos']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="d-none d-lg-flex nav-link link-underline-opacity-0 text-white fs-5 m-1 flex-column align-items-center"
+  >
+    <i class="bi bi-gear"></i>
+    <span class="underline"></span>
+    Cursos
+  </a>
+
+  <a
+    [routerLink]="['/nosotros']"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    class="d-none d-lg-flex nav-link link-underline-opacity-0 text-white fs-5 m-1 flex-column align-items-center"
+  >
+    <i class="bi bi-people"></i>
+    <span class="underline"></span>
+    Nosotros
+  </a>
+
+  <!-- MENÚ HAMBURGUESA PARA MÓVILES -->
+  <li class="nav-item dropdown d-lg-none">
+    <a
+      class="nav-link dropdown-toggle btn1 fs-6 p-2 m-0 p-0 d-flex flex-column justify-content-center align-items-center"
+      style="border-radius: 5px"
+      href="#"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <img
+        style="width: 35PX; height: 35PX;"
+        class="rounded-circle logo-img"
+        src="https://i.ibb.co/nNVKRXW2/PERFIL.jpg"
+        alt="logo">
+      <div class="d-flex flex-column align-items-center lh-sm">
+        <span class="fw-bold text-white">MASTER ACADEMY</span>
+        <p class="m-0 text-black-50 fs-6">Milton Franco</p>
+      </div>
+    </a>
+    <ul class="dropdown-menu text-center p-4 bg-dark" style="width: 230px">
+      <li>
+        <a
+          [routerLink]="['/home']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link link-underline-opacity-0 text-white fs-5 m-1 d-flex flex-column align-items-center"
+        >
+          <i class="bi bi-house-door"></i>
+          <span class="underline"></span>
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a
+          [routerLink]="['/cursos']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link link-underline-opacity-0 text-white fs-5 m-1 d-flex flex-column align-items-center"
+        >
+          <i class="bi bi-gear"></i>
+          <span class="underline"></span>
+          Cursos
+        </a>
+      </li>
+
+      <li>
+        <a
+          [routerLink]="['/nosotros']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link link-underline-opacity-0 text-white fs-5 m-1 d-flex flex-column align-items-center"
+        >
+          <i class="bi bi-people"></i>
+          <span class="underline"></span>
+          Nosotros
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <!-- BOTÓN DE INGRESO -->
+  <div class="d-flex align-items-center justify-content-end">
+    <a
+      (click)="openWhatsapp()"
+      class="btn-whatsapp btn fs-6 m-1 border-0 link-underline-opacity-0 text-white d-flex flex-column align-items-center"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      💬 Whatsapp
+    </a>
+  </div>
+
+</nav>
