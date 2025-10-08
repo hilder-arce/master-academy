@@ -27,3 +27,5 @@ import { PagesModule } from './pages/pages.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//ng deploy --repo=https://github.com/hilder-arce/master-academy.git --name="hilder-arce" --base-href=/master-academy/
