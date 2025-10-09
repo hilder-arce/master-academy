@@ -1,70 +1,30 @@
-.hero {
-  background: linear-gradient(135deg, #1c1f2b, #3a3f5c);
-  color: white;
-  border-radius: 12px;
-  margin: 20px 0;
-}
 
-.text-accent {
-  color: #25d366;
-}
-
-.btn-accent {
-  background-color: #25d366;
+/* === 3️⃣ ÁREAS DE DOMINIO === */
+.specialties-section {
+  background: #000;
   color: #fff;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  padding: 100px 20px;
+  text-align: center;
 }
-
-.btn-accent:hover {
-  background-color: #128c7e;
-  transform: translateY(-2px);
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
 }
-
-.text-gradient {
-  background: linear-gradient(90deg, #007bff, #00c4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.btn-gradient {
-  background: linear-gradient(90deg, #007bff, #00c4ff);
-  color: #fff;
-  border: none;
-  border-radius: 50px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.btn-gradient:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-}
-
-.course-card {
+.specialty-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.2);
   border-radius: 20px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  padding: 40px 25px;
+  transition: all 0.4s ease;
 }
-
-.hover-zoom:hover {
+.specialty-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.3);
 }
-
-.card-img-top {
-  height: 220px;
-  object-fit: cover;
-}
-
-
-/* Testimonios */
-.testimonios {
-  background: #0e153a;
-}
-
-/* CTA */
-.cta {
-  background: linear-gradient(90deg, #3550eb, #25d366);
-  color: white;
-  border-radius: 10px;
+.specialty-card i {
+  font-size: 2.5rem;
+  color: #00e6ff;
+  margin-bottom: 20px;
 }

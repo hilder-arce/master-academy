@@ -1,38 +1,135 @@
-/* You can add global styles to this file, and also import other style files */
-/* === PRELOADER GLOBAL === */
+/* === 🔷 LOADER FUTURISTA MASTER ACADEMY === */
 #global-loader {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #063772; /* azul corporativo */
+  inset: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 30%, #05081f, #000);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  color: white;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* Animación del spinner circular */
-.spinner {
-  border: 6px solid #ffffff;
-  border-top: 6px solid #fb740c; /* color naranja */
+#global-loader::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,255,255,0.05) 0%, rgba(170,0,255,0.05) 100%);
+  animation: bgPulse 6s ease-in-out infinite;
+}
+
+#global-loader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* === CONTENEDOR === */
+.loader-container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* === ANILLO ENERGÉTICO === */
+.energy-orbit {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 25px;
+  animation: rotate3D 12s linear infinite;
+  perspective: 600px;
+}
+
+.energy-ring {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
+  border: 3px solid transparent;
+  border-top: 3px solid #00fff6;
+  border-right: 3px solid #a000ff;
+  box-shadow: 0 0 25px rgba(0,255,255,0.4), 0 0 35px rgba(160,0,255,0.2);
+  animation: spin 2.2s linear infinite, glow 4s ease-in-out infinite;
+  margin: 0 auto;
 }
 
+/* === NÚCLEO DE ENERGÍA === */
+.energy-core {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 45px; height: 45px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #00fff6 0%, #a000ff 60%, transparent 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(0,255,255,0.8);
+  filter: blur(3px);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* === TEXTO === */
+.loader-title {
+  color: #00fff6;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  font-size: 2rem;
+  text-shadow: 0 0 25px rgba(0,255,255,0.8), 0 0 45px rgba(160,0,255,0.5);
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+.loader-text {
+  color: #b2eaff;
+  margin-top: 8px;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  animation: fadeInUp 3s ease-in-out;
+}
+
+/* === CONTADOR === */
+.loader-progress {
+  color: #00fff6;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-shadow: 0 0 25px rgba(0,255,255,0.7);
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* === ANIMACIONES === */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-#global-loader p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+@keyframes pulse {
+  0%,100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+}
+
+@keyframes glow {
+  0%,100% { box-shadow: 0 0 20px rgba(0,255,255,0.5); }
+  50% { box-shadow: 0 0 50px rgba(160,0,255,0.9); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgPulse {
+  0%,100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes rotate3D {
+  0% { transform: rotateY(0deg) rotateX(0deg); }
+  50% { transform: rotateY(180deg) rotateX(10deg); }
+  100% { transform: rotateY(360deg) rotateX(0deg); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .energy-orbit { width: 130px; height: 130px; }
+  .loader-title { font-size: 1.6rem; }
+  .loader-progress { font-size: 1.3rem; }
 }

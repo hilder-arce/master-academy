@@ -1,126 +1,132 @@
-/* ===== NAVBAR CORPORATIVO PREMIUM ===== */
+/* ===== 🌌 NAVBAR FUTURISTA PREMIUM ===== */
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
-  padding: 12px 40px;
+  padding: 14px 45px;
+  background: #3550eb;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 200, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #3550eb;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transition: all 0.4s ease;
 }
 
-/* Sombra más visible al hacer scroll */
+/* Efecto al hacer scroll */
 .nav-links.scrolled {
-  background: #032554;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+  background: rgba(5, 10, 25, 0.95);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
 }
 
-/* ===== LOGO ===== */
+/* ===== ⚙️ LOGO ===== */
 .logo-link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #ffffff;
+  font-size: 1.6rem;
+  color: #00e6ff;
   letter-spacing: 1px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
   transition: transform 0.4s ease, color 0.3s ease;
 }
 
 .logo-link:hover {
-  transform: scale(1.05);
-  color: #fb740c;
+  transform: scale(1.07);
+  color: #fff;
 }
 
-/* Logo con borde tenue */
 .logo-img {
+  border-radius: 50%;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .logo-link:hover .logo-img {
-  transform: rotate(8deg) scale(1.05);
-  box-shadow: 0 0 12px rgba(251, 116, 12, 0.5);
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
 }
 
-/* ===== ENLACES ===== */
+/* ===== 🧭 ENLACES ===== */
 .nav-link {
   position: relative;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-  margin: 0 20px;
+  color: #cfdfff;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #e2e6ef;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  margin: 0 18px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.6px;
 }
 
-/* Subrayado minimalista */
+/* Subrayado neón */
 .nav-link .underline {
   position: absolute;
-  bottom: -4px;
+  bottom: -5px;
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #fb740c;
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, #00e6ff, #007bff);
+  box-shadow: 0 0 8px #00e6ff;
+  transition: width 0.4s ease;
 }
 
 .nav-link:hover .underline {
   width: 100%;
 }
 
-/* Hover elegante */
+/* Efecto hover */
 .nav-link:hover {
-  color: #ffffff;
+  color: #00e6ff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
   transform: translateY(-2px);
 }
 
-/* ===== ENLACE ACTIVO ===== */
+/* Enlace activo */
 .nav-link.active {
-  color: #fb740c !important;
-  font-weight: 700;
+  color: #00e6ff !important;
 }
 
 .nav-link.active .underline {
   width: 100%;
 }
 
-/* ===== ICONOS ===== */
+/* Iconos */
 .nav-link i {
-  font-size: 1.2rem;
-  margin-bottom: 3px;
-  transition: transform 0.4s ease, color 0.3s ease;
+  font-size: 1.4rem;
+  margin-bottom: 4px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .nav-link:hover i {
-  transform: translateY(-3px);
-  color: #fb740c;
+  transform: translateY(-4px);
+  color: #00e6ff;
 }
 
-/* ===== BOTÓN INSTAGRAM FUTURISTA ===== */
+/* ===== 💫 BOTÓN INSTAGRAM FUTURISTA ===== */
 .btn-instagram {
   position: relative;
   overflow: hidden;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 10px 18px;
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff00c8, #ff9a00, #ff00c8);
   background-size: 300%;
-  box-shadow: 0 4px 15px rgba(150, 47, 191, 0.4);
-  transition: all 0.4s ease;
-  animation: igMove 6s ease infinite;
+  box-shadow: 0 0 18px rgba(255, 0, 200, 0.4);
+  transition: all 0.5s ease;
+  animation: igFlow 6s ease infinite;
+}
+
+.btn-instagram:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 200, 0.7);
 }
 
 .btn-instagram i {
@@ -128,61 +134,56 @@
   transition: transform 0.3s ease;
 }
 
-/* Efecto hover futurista */
-.btn-instagram:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 6px 20px rgba(240, 98, 146, 0.6);
-}
-
 .btn-instagram:hover i {
   transform: rotate(15deg);
 }
 
-/* Animación de gradiente */
-@keyframes igMove {
+@keyframes igFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Brillo dinámico en hover */
-.btn-instagram::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 60%);
-  transform: rotate(45deg);
-  transition: opacity 0.4s ease;
-  opacity: 0;
-}
-
-.btn-instagram:hover::before {
-  opacity: 1;
-}
-
-/* ===== MENÚ MÓVIL ===== */
+/* ===== 📱 MENÚ MÓVIL ===== */
 .dropdown-menu {
-  border: none;
-  border-radius: 8px;
-  background: rgba(10, 30, 60, 0.95);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background: rgba(10, 20, 40, 0.95);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+  border-radius: 10px;
+}
+
+.dropdown-menu .nav-link {
+  color: #cfdfff;
 }
 
 .dropdown-menu .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
+  background: rgba(0, 255, 255, 0.05);
+  border-radius: 6px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+/* ===== ⚡ RESPONSIVE ===== */
+@media (max-width: 992px) {
   .nav-links {
-    padding: 10px 20px;
+    padding: 12px 20px;
+    justify-content: space-around;
+  }
+
+  .logo-link span,
+  .logo-link p {
+    display: none;
+  }
+
+  .btn-instagram span {
+    display: none;
+  }
+
+  .btn-instagram i {
+    font-size: 1.6rem;
   }
 }
 
+/* Quita la flecha de dropdown Bootstrap */
 .dropdown-toggle::after {
   display: none !important;
 }
+

@@ -6,10 +6,3 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
   ngZoneEventCoalescing: true
 })
   .catch(err => console.error(err));
-
-  document.addEventListener('DOMContentLoaded', () => {
-  const loader = document.getElementById('global-loader');
-  if (loader) {
-    loader.style.display = 'none';
-  }
-});
