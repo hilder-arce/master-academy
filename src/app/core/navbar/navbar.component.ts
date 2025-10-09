@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { WhatsappService } from "../services/whatsapp.services";
+import { InstagramService } from "../services/instagram.service";
 
 @Component({
     selector: 'app-navbar',
@@ -9,12 +9,10 @@ import { WhatsappService } from "../services/whatsapp.services";
 
 export class NavbarComponent {
 
-    constructor(private readonly whatsappService: WhatsappService) {}
+    constructor(private readonly instagramService: InstagramService){}
 
-    openWhatsapp(): void {
-
-        this.whatsappService.openChat();
-
+    openInstagram(){
+        this.instagramService.openInstagramProfile();
     }
 
 }

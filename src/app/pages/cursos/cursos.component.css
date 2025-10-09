@@ -1,33 +1,246 @@
-.text-gradient {
-  background: linear-gradient(90deg, #007bff, #00c4ff);
+/* =========================================================
+   🌟 SECCIÓN PRINCIPAL - COURSES PREMIUM
+   ========================================================= */
+.courses-premium {
+  background: radial-gradient(circle at top, #0a0a0a, #000);
+  color: #fff;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+.courses-premium .container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =========================================================
+   🏷️ ENCABEZADO (div.header)
+   ========================================================= */
+.courses-premium .header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Título principal: <h2 class="title"> */
+.courses-premium .title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ffcc00, #fff7a5, #ffcc00);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 200%;
+  animation: shine 4s linear infinite;
 }
 
-.btn-gradient {
-  background: linear-gradient(90deg, #007bff, #00c4ff);
-  color: white;
-  border-radius: 50px;
-  border: none;
-  transition: all 0.3s ease;
+/* Palabra destacada dentro del título: <span class="highlight"> */
+.courses-premium .title .highlight {
+  color: #ffb300;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
 }
 
-.btn-gradient:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+/* Subtítulo: <p class="subtitle"> */
+.courses-premium .subtitle {
+  font-size: 1.1rem;
+  color: #cfcfcf;
+  max-width: 600px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
+/* =========================================================
+   🧱 GRID DE CURSOS (div.courses-grid)
+   ========================================================= */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* =========================================================
+   🃏 TARJETAS DE CURSO (div.course-card)
+   ========================================================= */
 .course-card {
+  background: rgba(20, 20, 20, 0.9);
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+/* Efecto hover */
+.course-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.3);
+}
+
+/* Imagen del curso */
 .course-card img {
+  width: 100%;
   height: 220px;
   object-fit: cover;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.2);
 }
 
-.hover-zoom:hover {
-  transform: translateY(-10px);
+/* Contenedor de información */
+.course-card .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+/* Título del curso */
+.course-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #f8e473;
+  margin-bottom: 10px;
+}
+
+/* Descripción del curso */
+.course-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 25px;
+}
+
+/* Botón de inscripción */
+.course-card button {
+  background: linear-gradient(90deg, #ffd700, #ffb300);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+  margin-top: auto;
+}
+
+/* Efecto hover del botón */
+.course-card button:hover {
+  background: linear-gradient(90deg, #ffde59, #ffc107);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+/* =========================================================
+   ✨ ANIMACIONES (encabezado y brillo)
+   ========================================================= */
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   📱 RESPONSIVE DESIGN
+   ========================================================= */
+
+/* 🔹 Tablets (pantallas medianas: ≤ 768px) */
+@media (max-width: 768px) {
+  .courses-premium {
+    padding: 60px 15px;
+  }
+
+  .courses-premium .title {
+    font-size: 2.2rem;
+  }
+
+  .courses-premium .subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .courses-grid {
+    gap: 2rem;
+  }
+
+  .course-card img {
+    height: 200px;
+  }
+
+  .course-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .course-card p {
+    font-size: 0.9rem;
+  }
+
+  .course-card button {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 🔹 Móviles (pantallas pequeñas: ≤ 480px) */
+@media (max-width: 480px) {
+  .courses-premium {
+    padding: 50px 10px;
+  }
+
+  .courses-premium .title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .courses-premium .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    border-radius: 15px;
+  }
+
+  .course-card img {
+    height: 180px;
+  }
+
+  .course-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .course-card p {
+    font-size: 0.85rem;
+  }
+
+  .course-card button {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
 }

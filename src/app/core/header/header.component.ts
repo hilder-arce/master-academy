@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { InstagramService } from "../services/instagram.service";
 
 @Component({
     selector: 'app-header',
@@ -6,4 +7,14 @@ import { Component } from "@angular/core";
     styleUrl: './header.component.css'
 })
 
-export class HeaderComponent {}
+export class HeaderComponent {
+
+    constructor(private readonly instagramService: InstagramService){}
+
+    openInstagramChat(){
+
+        this.instagramService.openInstagramChat();
+        
+    }
+
+}

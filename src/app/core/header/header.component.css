@@ -138,10 +138,10 @@
 
 .neon-button:hover {
   color: #fb740c;
-  background: #fff;
   border-color: #fb740c;
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(251, 116, 12, 0.9), 0 0 50px rgba(0, 224, 255, 0.8);
+  cursor: pointer;
 }
 
 /* ====== ANIMACIONES DE ENTRADA ====== */

@@ -106,24 +106,61 @@
   color: #fb740c;
 }
 
-/* ===== BOTÓN WHATSAPP ===== */
-.btn-whatsapp {
+/* ===== BOTÓN INSTAGRAM FUTURISTA ===== */
+.btn-instagram {
   position: relative;
-  background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
+  overflow: hidden;
   border: none;
-  border-radius: 6px;
-  color: white;
+  border-radius: 8px;
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 5px 5px 5px 5px;
-  box-shadow: 0 3px 12px rgba(18, 140, 126, 0.4);
+  padding: 10px 18px;
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background-size: 300%;
+  box-shadow: 0 4px 15px rgba(150, 47, 191, 0.4);
   transition: all 0.4s ease;
+  animation: igMove 6s ease infinite;
 }
 
-.btn-whatsapp:hover {
-  background: linear-gradient(90deg, #128c7e 0%, #25d366 100%);
-  box-shadow: 0 5px 18px rgba(18, 140, 126, 0.6);
-  transform: translateY(-2px);
+.btn-instagram i {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover futurista */
+.btn-instagram:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(240, 98, 146, 0.6);
+}
+
+.btn-instagram:hover i {
+  transform: rotate(15deg);
+}
+
+/* Animación de gradiente */
+@keyframes igMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Brillo dinámico en hover */
+.btn-instagram::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 60%);
+  transform: rotate(45deg);
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.btn-instagram:hover::before {
+  opacity: 1;
 }
 
 /* ===== MENÚ MÓVIL ===== */

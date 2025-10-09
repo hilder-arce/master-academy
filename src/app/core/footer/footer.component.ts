@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { WhatsappService } from "../services/whatsapp.services";
+import { InstagramService } from "../services/instagram.service";
 
 @Component({
     selector: 'app-footer',
@@ -9,16 +9,14 @@ import { WhatsappService } from "../services/whatsapp.services";
 
 export class FooterComponent{
 
-    constructor(private readonly whatsappService: WhatsappService){}
-
     email: string = 'info@masteracademy.com';
-
-    telefono: string = '+51 987 654 321';
 
     currentYear: number = new Date().getFullYear();
 
-    openWhatsapp(){
-        this.whatsappService.openChat();
+    constructor(private readonly instagramService: InstagramService){}
+
+    openInstagramProfile(){
+        this.instagramService.openInstagramProfile();
     }
 
 }
